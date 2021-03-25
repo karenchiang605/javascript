@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <ul id="myList">
+        <li>Item 01</li>
+        <li>Item 02</li>
+        <li>Item 03</li>
+    </ul> -->
+    <!-- 20-2-3 20-2-4 -->
+    <!-- <scrip>
+        var myList = document.getElementById('myList');
+        // var refNode = document.querySelectorAll('li')[0];
+        var oldNode = document.querySelectorAll('li')[0];
+        var newNode = document.createElement('li');
+        var textNode = document.createTextNode("Hello world!");
+        newNode.appendChild(textNode);
+
+        // 將新節點 newNode 插入 refNode 的前方
+        // myList.insertBefore(newNode, refNode);
+
+        // 將原有的 oldNode 替換成新節點 newNode
+        myList.replaceChild(newNode, oldNode);
+
+    </scrip> -->
+
+    <!-- 20-3-1 -->
+
+    <!-- <scrip>
+        var myList = document.getElementById('myList');
+        var removeNode = document.querySelectorAll('li')[1];
+        myList.removeChild(removeNode);
+    </scrip> -->
+
+    <!-- 20-3-1 -->
+    <!-- <button id="btn01">按鈕01</button>
+    <button id="btn02" name="btn02">按鈕02</button>
+    <button id="btn03" onclick="javascript: alert('btn03');">按鈕03</button>
+    <scrip>
+        let btn01 = document.querySelectorAll("button")[0];
+        btn01.setAttribute('name', "btn01");
+        btn01.setAttribute("disabled", "");
+
+        let btn02 = document.querySelectorAll("button")[1];
+        let strName = btn02.getAttribute("name");
+        document.write(strName);
+
+        let btn03 = document.querySelectorAll("button")[2];
+        btn03.removeAttribute("onclick");
+
+
+    </scrip> -->
+    <!-- <input type="text" id="txt" value="" />
+    <scrip>
+        let txt = document.querySelector
+            ("input#txt");
+        txt.setAttribute("name", "txt");
+        txt.setAttribute("value", "1234");
+        txt.setAttribute("data-price", "10000");
+        txt.setAttribute("data-title", "文字欄位");
+        txt.setAttribute("data-description", "可以輸入任何文字");
+
+        document.write("<hr />");
+        document.write(txt.getAttribute('data-title') + "<br />");
+        document.write(txt.getAttribute('data-price') + "<br />");
+        document.write(txt.getAttribute('data-description') + "<br />");
+    </scrip> -->
+
+    <!-- 21-3-1 -->
+    <p style="color: #7878ff; line-height: 3; font-size: 30px;">Hello World<br />Good job!</p>
+
+    <script>
+        let p = document.getElementsByTagName('p')[0];
+        document.write("<br />");
+        document.write(p.style.color + "<br />");
+        document.write(p.style.lineHeight + "<br />");
+        document.write(p.style.fontSize + "<br />");
+
+        p.style.color = "#ff0000";
+        p.style['font-size'] = '50px';
+        p.style['backgroundColor'] = '#CFEE99';
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 10-3-3 -->
+    <!-- <script>
+        //使用 push()，將資料加到陣列尾端：
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        listOfName.push('Ellen');
+        listOfName.push('Fox');
+        console.log(listOfName);
+        //輸出 ["Alex", "Bill", "Cook", "Darren", "Ellen", "Fox"]
+    </script> -->
+
+    <!-- 10-3-4 -->
+    <!-- <script>
+        //修改元素：
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        listOfName[0] = 'Allen';
+        listOfName[2] = 'Carl';
+        console.log(listOfName[0]); // 輸出 Allen
+        console.log(listOfName[2]); // 輸出 Carl
+        console.log(listOfName); // 輸出 [ 'Allen', 'Bill', 'Carl', 'Darren' ] 
+    </script> -->
+
+    <!-- 10-3-5 -->
+    <!-- <script>
+        //刪除元素，使用 pop()，將會刪除陣列尾端的資料：
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        listOfName.pop();
+        console.log(listOfName);// 輸出 [ 'Alex', 'Bill', 'Cook' ]
+        listOfName.pop();
+        console.log(listOfName); // 輸出 [ 'Alex', 'Bill' ]
+        listOfName.pop();
+        console.log(listOfName);
+
+        //重新初始化陣列
+        // listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        // let name = listOfName.pop();
+        // console.log(name); // 輸出 Darren
+    </script> -->
+
+    <!-- 10-3-6 -->
+    <!-- <script>
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        listOfName.shift();//刪除陣列第一個元素，使用 shift()
+        console.log(listOfName);// 輸出 [ 'Bill', 'Cook', 'Darren' ]
+
+
+        listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        let name = listOfName.pop();// 從陣列尾端刪除 Darren
+        listOfName.unshift(name); // 將刪除的陣列尾端資料放到陣列前端
+        console.log(listOfName);// 輸出 [ 'Darren', 'Alex', 'Bill', 'Cook' ]
+
+    </script> -->
+    <!-- 10-3-6 二維陣列 -->
+    <!-- <script>
+        let arr = [
+            ['a0', 'a1', 'a2', 'a3'],
+            ['b0', 'b1', 'b2'],
+            ['c0', 'c1', 'c2', 'c3', 'c4'],
+        ];
+        console.log(arr[0][1]);// 輸出 a1
+        console.log(arr[2][4]);// 輸出 c4
+        console.log(arr[1][2]);// 輸出 b2
+    </script> -->
+
+
+
+    <!-- 10-3-8 -->
+    <!-- <script>
+        //建立二維陣列：
+        let arr1d = [];
+        for (let i = 1; i <= 9; i++) {
+            //先建立一維陣列
+            arr1d.push(i);
+        }
+        let arr2d = [];
+        for (let j = 1; j <= 9; j++) {
+            //連續新增先前建立的一維陣列，便可成為二維陣列
+            arr2d.push(arr1d);
+        }
+
+        console.log(arr2d);
+
+    </script> -->
+
+</head>
+
+<body>
+    <!-- 練習延伸 -->
+    <script>
+        //  求 刪除尾端 往前補後 第9487次後的陣列模式
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        for (let i = 1; i <= 9487; i++) {
+            // 先pop拔出來
+            let num = listOfName.pop();
+            // 拔出來的值 用unshift 塞到前面
+            listOfName.unshift(num);
+        }
+        console.log(listOfName);
+    </script>
+
+</body>
+
+</html>

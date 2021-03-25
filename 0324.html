@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 17-2-3 -->
+    <!-- <script>
+        //window.navigator 的範例
+        var sBrowser, sUsrAg = navigator.userAgent;
+
+        if (sUsrAg.indexOf("Chrome") > -1) {
+            sBrowser = "Google Chrome";
+        } else if (sUsrAg.indexOf("Safari") > -1) {
+            sBrowser = "Apple Safari";
+        } else if (sUsrAg.indexOf("Opera") > -1) {
+            sBrowser = "Opera";
+        } else if (sUsrAg.indexOf("Firefox") > -1) {
+            sBrowser = "Mozilla Firefox";
+        } else if (sUsrAg.indexOf("MSIE") > -1) {
+            sBrowser = "Microsoft Internet Explorer";
+        }
+
+        document.write("您正在使用: " + sBrowser);
+    </script> -->
+
+    <!-- 18-1-1 -->
+    <!-- <a href="https://tw.yahoo.com/" onclick="javascript:alert(document.links[0].href);">奇摩連結</a> -->
+
+    <!-- 18-1-2 -->
+    <!-- <input type="text" name="txt" id="txt" onfocus="showFocus()" />
+    <script>
+        function showFocus() {
+            document.getElementById('txt').value = '你好!!';
+        }
+    </script> -->
+
+    <!-- 18-1-3 -->
+    <!-- <div id="box" style="width: 200px; height: 100px;background-color:#9999ff;" onmousemove="move()" onmouseout="out()">
+        請用滑鼠移過此元素</div>
+    <script>
+        function move() {
+            document.getElementById("box").style.backgroundColor = '#33ffff';
+        }
+        function out() {
+            document.getElementById("box").style.backgroundColor = '#ff0000';
+        }
+    </script> -->
+    <!-- 18-2-1 -->
+    <!-- <button id="btn" style="width: 200px; height: 100x;">按下後改變文字</button>
+    <br /><br /><br /><br />
+    <div style="width: 150px; height: 100px; border: 1px solid;">請用滑鼠移過此元素</div>
+    <br /><br /><br /><br />
+    <img class="puppy" src="https://i.pinimg.com/600x315/8d/4c/82/8d4c82be4f898f25a465919698566b57.jpg" />
+    <script>
+        document.getElementById('btn').addEventListener('click', function (event) {
+            alert(this.innerText);
+            this.innerText = '已改變';
+        });
+        let div = document.getElementsByTagName('div')[0];
+        div.addEventListener('mousemove', function (event) {
+            this.style.backgroundColor = '#33ffff';
+        });
+        div.addEventListener('mouseout', function (event) {
+            this.style.backgroundColor = '#ff0000';
+        });
+
+        //對 img.puppy 註冊滑鼠移入事件
+        document.querySelector('img.puppy').addEventListener('mousemove', function (event) {
+            this.setAttribute(
+                "src",
+                "https://ballparkdigest.com/wp-content/uploads/2020/02/New-Trenton-Thunder-bat-dog-300x300.jpg"
+            );
+        });
+    </script>
+ -->
+    <!-- 18-3-1 -->
+    <!-- <button id="btn" style="width: 100px; height: 50px;">連點兩下: 0</button>
+    <script>
+        let count = 0;
+        let width = 100;
+        let height = 50;
+        document.getElementById('btn').addEventListener('dblclick', function () {
+            count += 1;
+            width += 20;
+            height += 20;
+            this.innerText = '連點兩下: ' + count;
+            this.style.width = width + "px";
+            this.style.height = height + "px";
+        })
+    </script> -->
+
+    <!-- 19-1-1 -->
+    <!-- <button name="btn_get" id="btn_get">使用 GET 傳遞</button>
+    <br />
+    <button name="btn_post" id="btn_post">使用 POST 傳遞</button>
+    <br />
+    <button name="btn_ajax" id="btn_ajax">使用 Ajax 傳遞</button>
+
+    <div id="message"></div> -->
+    <!-- 引入 jQuery 的函式庫 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //取得 document 當中的 div#message 元素
+        let div = document.querySelector("div#message");
+        $(document).ready(function () {
+            /**
+             * 如果使用 GET 方式，練習時可以使用下列的網址:
+             * https://data.taipei/opendata/datalist/apiAccess?scope=datasetMetadataSearch
+             */
+
+            //使用 GET 傳遞
+            $(document).on('click', 'button#btn_get', function () {
+                $.get("https://httpbin.org/get", function (objJson) {
+                    div.innerHTML = JSON.stringify(objJson);
+                });
+            });
+
+            //使用 POST 傳遞
+            $(document).on('click', 'button#btn_post', function () {
+                $.post("https://httpbin.org/post ", { postMethod: "1" })
+                    .done(function (objJson) {
+                        div.innerHTML = JSON.stringify(objJson);
+                    });
+            });
+
+            //使用 Ajax 傳遞
+            $(document).on('click', 'button#btn_ajax', function () {
+                $.ajax({
+                    method: 'POST', // GET
+                    url: "https://httpbin.org/post",
+                    data: {
+                        postMethod: "1"
+                    }
+                }).done(function (objJson) {
+                    div.innerHTML = JSON.stringify(objJson);
+                });
+            });
+        });
+    </script> -->
+
+    <!-- 20-2-1 -->
+    <script>
+        var newDiv = document.createElement('div');
+        newDiv.id = "myNewDiv";
+        newDiv.className = "box";
+        var textNode = document.createTextNode("Hello world!");
+        newDiv.appendChild(textNode);
+        document.body.appendChild(newDiv);
+    </script>
+
+    <!-- 20-2-2
+
+    <ul id="myList">
+        <li>Item 01</li>
+        <li>Item 02</li>
+        <li>Item 03</li>
+    </ul>
+    <script>
+        var myList = document.getElementById('myList');
+        var newList = document.createElement('li');
+        var textNode = document.createTextNode("Hello world!");
+        newList.appendChild(textNode);
+        myList.appendChild(newList);
+    </script> -->
+
+
+</body>
+
+</html>

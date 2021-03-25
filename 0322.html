@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        //宣告一個陣列
+        let arr = ["Alex", "Bill"];
+
+        //宣告一個字串
+        let str = "人生好難";
+
+        //判斷 Bill 是否存在於 arr 當中
+        if (arr.indexOf("Bill") !== -1) {
+            alert(`有找到 Bill`);
+        } else {
+            alert(`沒找到 Bill ...`);
+        }
+        //判斷「好」是否存在於 str 當中
+        if (str.indexOf("好") !== -1) {
+            alert(`有找到「好」`);
+        } else {
+            alert(`沒找到「好」 ...`);
+        }
+    </script> -->
+
+    <!-- 11-1-1 -->
+
+    <!-- <script>
+        //輸出 json 內容 
+        let str = '{"firstName": "Darren", "lastName": "Yang","gender": "male","age": 18,"address": {"streetAddress": "台北市復興南路一段390號2樓、3樓","city": "Taipei",},"phoneNumber": [{"type": "office","number": "6631-6666"}, {"type": "fax","number": "6631-6598"}]}';
+        console.log(str);
+    </script> -->
+
+    <!-- 11-1-2 -->
+
+    <!-- <script>
+        //輸出 json 內容 
+
+        let str = `{
+            "firstName": "Darren",
+            "lastName": "Yang",
+            "gender": "male",
+            "age": 18,
+            "address": {
+                "streetAddress": "台北市復興南路一段390號2樓、3樓",
+                "city": "Taipei"
+            },
+            "phoneNumber": [
+                {
+                    "type": "office",
+                    "number": "6631-6666"
+                },
+                {
+                    "type": "fax",
+                    "number": "6631-6598"
+                }
+            ]
+        }`;
+
+        //將 json 轉成物件
+        let obj = JSON.parse(str);
+
+        //讀取 obj 物件屬性 firstName
+        console.log(obj['firstName']);
+
+        //將 obj 物件屬性 phoneNumber 當中的陣列資料（裡面是物件）逐一列出
+        for (let o of obj['phoneNumber']) {
+            console.log(`===============`);
+            console.log(o[`type`]);
+            console.log(o[`number`]);
+        }
+    </script> -->
+
+    <!--11-3-1-->
+    <!-- <script>
+        // 物件初始化
+        let objPerson = {
+            name: "Bill",
+            age: 25,
+            hairColor: 'black',
+            skinColor: 'beige'
+        };
+        //新增屬性
+        objPerson.hadShoes = true;
+        objPerson.isWoken = true;
+
+        //修改屬性
+        objPerson.age = 26;
+
+        // //刪除屬性
+        delete objPerson.skinColor;
+
+        // //將物件轉成 JSON
+        let strJson = JSON.stringify(objPerson);
+
+        //顯示 JSON 內容
+        console.log(strJson);
+
+    </script> -->
+
+    <!-- 12-1-1 -->
+    <!-- <script>
+        //建立基本函式
+        function say() {
+            console.log(`Hello World!`);
+        }
+        //帶有參數的函式
+        function greet(name) {
+            console.log('Hello, ' + name);
+        }
+
+        //有回傳值的函式
+        function getMessage() {
+            return 'Good job!';
+        }
+        //依序執行各個函式
+        say();
+        greet('Alex');
+        console.log(getMessage());
+
+
+    </script> -->
+    <!-- 12-2-1 -->
+    <!-- <script>
+        //建立暱名函式
+        let say = function () {
+            console.log('Helllo World!');
+        }
+        //帶有參數的暱名函式
+        let greet = function (name) {
+            console.log(`Hello, ` + name);
+        }
+        //有回傳值的暱名函式
+        let getMessage = function (name) {
+            return 'Good job!';
+        }
+
+        //依序執行各個函式
+        say();
+        greet('Alex');
+        console.log(getMessage());
+
+
+
+    </script>
+ -->
+    <!-- 12-2-2 -->
+    <!-- <script>
+
+        //顯示在 Console 面板
+        (
+            function () {
+                console.log('Hello World!');
+            }
+        )();
+
+        //顯示在 <body> 當中
+        (
+            function () {
+                document.write('Good job!');
+            }
+        )();
+
+        // //跳出訊息
+
+        (
+            function (name) {
+                alert('Good job! ' + name);
+            }
+        )('Karen');
+
+    </script> -->
+
+    <!-- 13-1-1 -->
+    <!-- <script>
+        //定義一個函式
+        function test() {
+            //宣告全域變數
+            var01 = 'A';
+
+            document.write('var01 = ' + var01 + '<br>');　// 輸出 A
+        }
+
+        //在 function 外定義變數
+        var var02 = 'C';
+
+        //執行函式
+        test();
+
+        //在 function 外輸出變數的值
+        document.write('var01 = ' + var01 + '<br>');　// 輸出 A
+        document.write('var02 = ' + var02 + '<br>');　// 輸出 B
+    </script> -->
+
+    <!-- 13-1-2 -->
+    <!-- <script>
+        //定義一個函式
+        function test() {
+            //宣告一個全域變數
+            var01 = 'A';
+
+            document.write('var01 = ' + var01 + '<br>');　// 輸出 A
+        }
+
+        //設定 var01 的值
+        function setVar() {
+            var01 = 'B';
+        }
+
+        //執行函式
+        test();
+        setVar();
+
+        //在 function 外輸出變數的值
+        document.write('var01 = ' + var01 + '<br>');　// 輸出 B
+    </script> -->
+
+    <!-- 13-2-1 -->
+    <!-- <script>
+        //定義一個函式
+        function test() {
+            //宣告區域變數
+            var var01 = 'A';
+
+            //宣告全域變數
+            var02 = 'B';
+
+            document.write('var01 = ' + var01 + '<br>');　// 輸出 A
+            document.write('var02 = ' + var02 + '<hr>');　// 輸出 B
+        }
+
+        //在 function 外定義變數
+        var var03 = 'C';
+
+        //執行函式
+        test();
+
+        //document.write('var01 = ' + var01 + '<br>');　// 拋出錯誤
+        document.write('var02 = ' + var02 + '<br>');　// 輸出 B
+        document.write('var03 = ' + var03 + '<hr>');　// 輸出 C
+    </script> -->
+
+    <!-- 13-3-1 -->
+    <!-- <script>
+
+        //定義函式
+        function makeFunc() {
+            //宣告變數
+            let strName = 'Darren';
+
+            //內部函式
+            function displayName() {
+                console.log(strName);
+            }
+
+            //執行內部函式
+            displayName();
+        }
+
+        //執行函式
+        makeFunc();
+    </script> -->
+
+    <!-- 13-3-2 -->
+
+    <!-- <script>
+        strNum = 9487;
+        //定義函式
+        function makeFunc() {
+            //宣告變數
+            let strName = 'Bill';
+
+            //內部函式
+            let displayName = function () {
+                //存取全域變數
+                console.log(strName + ' 說: ' + strNum);
+            }
+
+            //執行內部函式
+            displayName();
+        }
+        //執行函式
+        makeFunc();
+    </script> -->
+    <!-- 14-1-1 -->
+    <!-- <script>
+        //以 function 這個關鍵字的來建立類別（class）
+        var Person = function () { };
+
+
+        //用 new 關鍵字來實體化（變成物件）
+        var person1 = new Person();
+        var person2 = new Person();
+    </script> -->
+
+
+    <!-- 14-2-1 -->
+    <!-- <script>
+        //以 function 這個關鍵字的來建立類別（class）
+        var Person = function (firstName) {
+            //以 this 關鍵字作為實體本身
+            this.firstName = firstName;
+        };
+
+        //用 new 關鍵字來實體化（變成物件）
+        var person1 = new Person("Alex");
+        var person2 = new Person("Bill");
+
+        //輸出兩個 person 的 firstName
+        console.log(person1.firstName);
+        console.log(person2.firstName);
+    </script> -->
+    <!-- <script>
+        let Person = function (name, height, weight, age) {
+            this.hands = 2;
+            this.name = name;
+            this.getName = function () {
+                return this.name;
+            };
+        };
+        let person01 = new Person("Darren", 150, 100, 18);
+        console.log(person01.getName());
+    </script> -->
+
+    <!-- 14-3-1 -->
+    <!-- <script>
+        //以 function 這個關鍵字的來建立類別（class）
+        var Person = function (firstName) {
+            //以 this 關鍵字作為實體本身
+            this.firstName = firstName;
+        };
+        //使用 prototype，為 Person 類別定義了方法 sayHello()
+        //共同的屬性或方法，不見得一定要在類別中定義
+        //也可以透過 prototype 來建立 Person 原型的方法
+        Person.prototype.sayHello = function () {
+            console.log("Hello, I'm " + this.firstName);
+        };
+        //用 new 關鍵字來實體化（變成物件）
+        var person1 = new Person("Alex");
+        var person2 = new Person("Bill");
+
+        //輸出兩個 person 的 firstName
+        console.log(person1.firstName);
+        console.log(person2.firstName);
+
+        person1.sayHello();
+        person2.sayHello();
+
+
+    </script> -->
+
+    <!-- 15-1-1 -->
+    <!-- <script>
+        //宣告 Date 物件：
+        let date = new Date();
+        //字串變數，預設空值
+        let strTime = '';
+        //串接時間
+        strTime += date.getFullYear();
+        strTime += date.getMonth() + 1;
+        strTime += date.getDate();
+        strTime += date.getHours();
+        strTime += date.getMinutes();
+        strTime += date.getSeconds();
+        //輸出結果
+        console.log(strTime);
+
+
+    </script> -->
+
+    <!-- 15-1-2 -->
+    <!-- <script>
+        /**
+         * if else 版本
+         */
+
+        //宣告 Date 物件
+        let date = new Date();
+
+        //宣告變數
+        let year, month, day, hour, minute, second;
+
+        // 2020，西元年
+        year, month, day, hour, minute, second;
+
+        // 月份，10 月時執行會出現 9，比正常值少 1，記得加 1
+        if ((date.getMonth() + 1) < 10) {
+            month = '0' + (date.getMonth() + 1);
+        } else {
+            month = (date.getMonth() + 1);
+        };
+
+        // 25，當月 25 號
+        if (date.getDate() < 10) {
+            day = '0' + date.getDate();
+        } else {
+            day = date.getDate();
+        };
+
+        // 幾時，例如 14 時
+        if (date.getHours() < 10) {
+            hour = '0' + date.getHours();
+        } else {
+            hour = date.getHours();
+        };
+
+        // 幾分，例如 58 分
+        if (date.getMinutes() < 10) {
+            minute = '0' + date.getMinutes();
+        } else {
+            minute = date.getMinutes();
+        };
+
+        //幾秒，例如 53 秒
+        if (date.getSeconds() < 10) {
+            second = '0' + date.getSeconds();
+        } else {
+            second = date.getSeconds();
+        };
+
+        //輸出結果
+        console.log(`${year}-${month}-${day} ${hour}:${minute}:${second}`);
+    </script> -->
+
+    <!-- 15-2-1 -->
+    <!-- <script>
+        setTimeout(function () { alert('Hello world'); }, 3000);
+        function getMessage() {
+            alert('Good job!');
+        }
+
+        setTimeout(getMessage, 10000);
+
+    </script> -->
+    <!-- 15-2-2 -->
+    <!-- <p id="txt">時間開始</p>
+    <script>
+        var p = document.getElementById("txt");
+        setTimeout(function () {
+            p.innerText = "2秒";
+        }, 2000);
+        setTimeout(function () {
+            p.innerText = "4秒";
+        }, 4000);
+        setTimeout(function () {
+            p.innerText = "6秒";
+        }, 6000);
+    </script> -->
+
+    <!-- 15-2-4 -->
+
+    <!-- <script>
+        var myVar;
+        function myStartFunction() {
+            myVar = setTimeout(alertFunc, 3000, "Runoob", "Google");
+        }//此函式用在 myStartFunction 當中
+        function alertFunc(param1, param2) {
+            alert(`你的參數: ${param1}, ${param2}`);
+        }
+
+        //執行函式
+        myStartFunction(); -->
+    <!-- </script> -->
+
+    <!-- 15-2-5 -->
+    <!-- <button onclick="startCount()">開始累加</button>
+    <input type="text" id="txt" value="">
+    <button onclick="stopCount()">結束累加</button>
+    <scrip>
+        var countNum = 0;
+        var t;
+        function count() {
+            document.getElementById("txt").value = countNum;
+            countNum = countNum + 1;
+            t = setTimeout(function () { count() }, 1000);
+        }
+        function startCount() {
+            count();
+        }
+
+        function stopCount() {
+            clearTimeout(t);
+        }
+    </scrip> -->
+    <!-- 15-3-1 -->
+
+    <!-- <button onclick="startCount()" id="btn_start">開始累加</button>
+    <input type="text" id="txt" value="">
+    <button onclick="stopCount()" id="btn_end">結束累加</button>
+    <scrip>
+        var countNum = 0;
+        var t;
+        function count() {
+            document.getElementById("txt").value = countNum;
+            countNum = countNum + 1;
+        }
+        function startCount() {
+            //週期性在指定毫秒後，進行累加
+            t = setInterval(function () { count() }, 1000);
+
+            //將開始按鈕設定為不可用
+            document.getElementById("btn_start").setAttribute("disabled", true);
+
+            //將結束鈕按移除不可用的屬性
+            document.getElementById("btn_end").removeAttribute("disabled");
+        }
+
+        //結束累加
+        function stopCount() {
+            //結束 setInterval
+            clearInterval(t);
+
+            //將開始鈕按移除不可用的屬性
+            document.getElementById("btn_start").removeAttribute("disabled");
+
+            //將結束按鈕設定為不可用
+            document.getElementById("btn_end").setAttribute("disabled", true);
+        }
+    </scrip> -->
+    <!-- 16-1-1 -->
+    <!-- <scrip>
+        //隨機產生 0 (包含) 到 1 (不包含) 之間的隨機數
+        console.log(Math.random()); // 輸出 0.02529304315381542
+        console.log(Math.random()); // 輸出 0.8048744968811596
+        console.log(Math.random()); // 輸出 0.3708412087199269
+        console.log(Math.random()); // 輸出 0.9822622936344187
+        console.log(Math.random());
+    </scrip> -->
+
+    <!-- 16-1-2 -->
+    <script>
+        let arrMeal = ['麥當勞', '肯德基', '摩斯漢堡', '頂呱呱', '漢堡王'];
+        let idxRandom = Math.floor(Math.random() * arrMeal.length);
+
+        document.write(`我可以選擇的餐廳有: <br />`);
+        for (let i = 0; i < arrMeal.length; i++) {
+            document.write('● ' + arrMeal[i] + '<br />');
+        }
+        document.write(`今天中餐，我選擇 ${arrMeal[idxRandom]}`);
+    </script>
+
+
+</body>
+
+</html>
+
+
+</scrip>
+
+
+
+</body>
+
+</html>

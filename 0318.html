@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <!-- 9-2-1 -->
+    <!-- <script>
+        let cat = {
+            legs: 4,
+            name: 'Darren',
+            color: 'orange',
+            ability: {
+                jump: function () {
+                    console.log('Jump!');
+                },
+                sound: function () {
+                    console.log('Meow~');
+                },
+                sleep: function () {
+                    console.log('ZZZzzz...');
+                }
+            }
+        };
+        console.log(cat['legs']);
+        console.log(cat['name']);
+        cat['ability'].sleep();
+        cat['ability'].sound();
+        console.log(cat.legs);
+        cat.ability.sound();
+    </script> -->
+
+    <!-- 9-2-2 -->
+    <!-- <script>
+        let cat = {
+            legs: 4,
+            name: 'Darren',
+            color: 'Tangerine',
+            ability: {
+                jump: function () {
+                    console.log('Jump!');
+                },
+                sound: function () {
+                    console.log('Meow~');
+                },
+                sleep: function () {
+                    console.log('ZZZzzz...');
+                }
+            }
+        };
+        cat['eye_color'] = 'black';
+        cat.habbit = 'play with slave';
+        // console.dir(cat, { depth: null });
+        console.dir(cat, { depth: 3 });
+        cat.ability.jump();
+        cat.ability.sound();
+        cat.ability.sleep();
+
+    </script> -->
+
+    <!-- i++ & ++i -->
+    <!-- <script>
+        let i = 0
+        console.log(i++); //0
+        console.log(i); //1
+        console.log(++i); //2
+    </script> -->
+
+    <!-- 9-3-1 -->
+    <!-- <script>
+        let obj = {
+            fname: 'Darren',
+            lname: 'Yang',
+            age: null,
+            lineId: 'telunyang',
+        };
+
+        //查看所有屬性 attr為變數
+        for (let attr in obj) {
+            // console.log(`The property in object variable is ${attr}`);
+            console.log(`All: ${attr}`);
+            console.log(`${obj[attr]}`);
+            // (`${obj[attr]}`) 印出資料
+        }
+        // ________________________________
+        // in取陣列值0 1 2
+        let arr = ['a', 'b', 'c'];
+        for (let key in arr) {
+            console.log(key);
+        }
+
+        // of取得資料a b c
+        for (let value of arr) {
+            console.log(value);
+        }
+    </script> -->
+
+    <!-- 10-3-1 -->
+    <!-- <script>
+        //一般來說，陣列的索引，從 [0] 開始，到 [n – 1] 結束。
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        console.log( listOfName[0] ); // 輸出 Alex
+        console.log( listOfName[3] ); // 輸出 Darren
+        console.log( listOfName[4] ); // 輸出 Undefined  
+        </script> -->
+
+    <!-- 10-3-2 -->
+    <!-- <script>
+        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+        listOfName[4] = 'Karen';
+        console.log(listOfName);
+        console.log(listOfName[4]);
+    </script> -->
+
+
+    <!-- 印出["a", "b", "c", "d"] -->
+    <script>
+        let arr = ['a', 'b', 'c', 'd'];
+        let str = " ";
+        for (let i = 0; i < arr.length; i++) {
+            if (str == "") { str = arr[i]; }
+            else {
+                str += "," + arr[i];
+            }
+        };
+        console.log(arr);
+        console.log(arr.join(','));
+    </script>
+
+
+</body>
+
+</html>
